@@ -49,6 +49,13 @@ console.log(uneng('Guvf vf n grfg fragrapr.', 2));
 ## Vue.js
 
 ```js
+<template>
+  <div class="footer">
+    <h1>{{ title }}</h1>
+    <p>{{ paragraph() }}</p>
+  </div>
+</template>
+
 <script>
 import unenglish from 'unenglish';
 
