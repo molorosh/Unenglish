@@ -10,12 +10,15 @@ module.exports = function transform(txt, code) {
         "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM"
     ];
     let selected = 0;
-    try{
-      if (code < 0 || code > 2){
-        selected = 0;
-      }
-    }catch{
+    if(code === null || code === undefined){
       selected = 0;
+    }else if(typeof code !== "number"){
+      throw new TypeError("transform(...,code) wants a integer!");
+    }else if(!Number.isInteger(code)){
+      throw new TypeError("transform(...,code) wants a integer!");
+    }
+    if (code >= 0 || code <= replaceChars.length){
+      selected = code;
     }
     let result = txt;
     if(txt){
