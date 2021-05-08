@@ -1,0 +1,25 @@
+{
+  "name": "unenglish",
+  "version": "1.0.0",
+  "description": "a library to transmogrify plain English strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molorosh/Unenglish.git"
+  },
+  "keywords": [
+    "english",
+    "localisation",
+    "localization",
+    "transform"
+  ],
+  "author": "Howard G Ricketts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/molorosh/Unenglish/issues"
+  },
+  "homepage": "https://github.com/molorosh/Unenglish#readme"
+}
