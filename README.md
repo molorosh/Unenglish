@@ -25,9 +25,6 @@ npm -i unenglish@latest
 ```js
 const uneng = require('unenglish');
 
-console.log("Node Test Script");
-console.log("================");
-
 // default is 'Japanglish'
 console.log(uneng('This is a test sentence.'));
 // => 匕井l乙 l乙 大 匕巳乙匕 乙巳冂匕巳冂匸巳.
@@ -47,9 +44,29 @@ console.log(uneng('This is a test sentence.', 2));
 // and since Rot-13 is reversable:
 console.log(uneng('Guvf vf n grfg fragrapr.', 2));
 // => This is a test sentence.
-
-console.log("=============");
-console.log("End of Script");
 ```
 
 ## Vue.js
+
+```js
+<script>
+import unenglish from 'unenglish';
+
+export default {
+  name: 'Footer',
+  props: {
+    msg: String
+  },
+  computed: {
+    title(){
+      return unenglish('This is the footer...', 0);
+    }
+  },
+  methods: {
+    paragraph() {
+      return unenglish('This is why we cannot have good things.', 1);
+    }
+  }
+}
+</script>
+```
