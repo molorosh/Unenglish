@@ -1,4 +1,5 @@
 module.exports = function transform(txt, code) {
+  if (typeof txt !== "string") throw new TypeError("transform(txt) wants a string!");
   let baseChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
   let replaceChars = [
         // Japanglish
